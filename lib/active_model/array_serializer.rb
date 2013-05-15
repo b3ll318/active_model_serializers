@@ -46,8 +46,8 @@ module ActiveModel
       @options[:unique_values] = {}
 
       if root = @options[:root]
-        hash.merge!(root => serializable_array)
         include_meta hash
+        hash.merge!(root => serializable_array)
         hash
       else
         serializable_array
