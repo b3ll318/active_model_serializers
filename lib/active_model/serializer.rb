@@ -341,8 +341,8 @@ module ActiveModel
         @options[:hash] = hash = {}
         @options[:unique_values] = {}
 
-        hash.merge!(root => serializable_hash)
         include_meta hash
+        hash.merge!(root => serializable_hash)
         hash
       else
         serializable_hash
